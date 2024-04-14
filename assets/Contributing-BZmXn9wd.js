@@ -1,9 +1,10 @@
-import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as r}from"./index-z5U8iC57.js";import"./index-BBkUAzwr.js";function o(s){const n={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",hr:"hr",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...r(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"contributing-to-redback-ui",children:"Contributing to Redback UI"}),`
+import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as o}from"./index-z5U8iC57.js";import"./index-BBkUAzwr.js";function r(s){const n={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",hr:"hr",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...o(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"contributing-to-redback-ui",children:"Contributing to Redback UI"}),`
 `,e.jsxs(n.ol,{children:[`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#prerequisites",children:"Prerequisites"})}),`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#getting-started",children:"Getting started"})}),`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#creating-a-new-component",children:"Creating a new component"})}),`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#working-with-documentation-pages",children:"Working with documentation pages"})}),`
+`,e.jsx(n.li,{children:e.jsx(n.a,{href:"#before-submitting-your-change",children:"Before submitting your change"})}),`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#submitting-your-change",children:"Submitting your change"})}),`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#useful-links",children:"Useful links"})}),`
 `]}),`
@@ -78,6 +79,18 @@ import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as r}from"
 `,e.jsxs(n.p,{children:["Like regular components, ",e.jsx(n.a,{href:"https://www.npmjs.com/package/generate-react-cli",rel:"nofollow",children:"generate-react-cli"})," is set up to simplify the creation of new custom components for documentation pages. If you see a need to add a new component for documentation purposes, please use the generator to do so from the boilerplate templates:"]}),`
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`npx generate-react-cli component ComponentName --type=doc
 `})}),`
+`,e.jsx(n.h2,{id:"before-submitting-your-change",children:"Before submitting your change"}),`
+`,e.jsx(n.p,{children:"Test the built version of Storybook to make sure everything works as expected, so that when your PR is approved and merged into the main branch you can be confident that you haven't introduced any errors such as incorrect file paths."}),`
+`,e.jsxs(n.ol,{children:[`
+`,e.jsxs(n.li,{children:["Build Storybook",`
+`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`npm run build
+`})}),`
+`]}),`
+`,e.jsxs(n.li,{children:["Preview the built version locally",`
+`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`npm run preview
+`})}),`
+`]}),`
+`]}),`
 `,e.jsx(n.h2,{id:"submitting-your-change",children:"Submitting your change"}),`
 `,e.jsxs(n.ol,{children:[`
 `,e.jsxs(n.li,{children:[`
@@ -115,4 +128,4 @@ import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as r}from"
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1#principle2",rel:"nofollow",children:"2.x: Operable"})}),`
 `]}),`
 `]}),`
-`]})]})}function c(s={}){const{wrapper:n}={...r(),...s.components};return n?e.jsx(n,{...s,children:e.jsx(o,{...s})}):o(s)}export{c as default};
+`]})]})}function c(s={}){const{wrapper:n}={...o(),...s.components};return n?e.jsx(n,{...s,children:e.jsx(r,{...s})}):r(s)}export{c as default};

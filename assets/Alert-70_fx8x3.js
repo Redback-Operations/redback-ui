@@ -4,6 +4,7 @@ import{j as i}from"./jsx-runtime-DRTy3Uxn.js";import{u as l}from"./styled-compon
 	border-left-width: ${e=>e.theme.spacing.sm};
 	color: ${e=>a(e.theme.colors[e.type])};
 	padding: ${e=>e.theme.spacing.md};
+	box-sizing: border-box;
 	margin-bottom: ${e=>e.theme.spacing.lg};
 	background: ${e=>n(e.theme.colors.background)<.5?s(.1,e.theme.colors.background):"white"};
 	color: ${e=>{const r=n(e.theme.colors.background)<.5;let t=e.theme.colors[e.type],o=0;for(;o<4;){if(m(t,e.theme.colors.background).AA)return t;t=r?s(.1,t):c(.1,t),o++}return a(e.theme.colors.background)}};
