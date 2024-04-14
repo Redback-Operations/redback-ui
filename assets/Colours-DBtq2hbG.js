@@ -1,4 +1,4 @@
-import{j as o}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as c}from"./index-z5U8iC57.js";import"./index-BBkUAzwr.js";import{u as n}from"./styled-components.browser.esm-CoKU8m7y.js";import{g as l,a as d,c as m}from"./polished.esm-DHPXM_EY.js";import{R as h}from"./RedbackUiThemeProvider-D71Zj-Rh.js";import{t as u}from"./index-BOtxDjrs.js";import{A as g}from"./Alert-70_fx8x3.js";const x=n.div`
+import{j as o}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as c}from"./index-z5U8iC57.js";import"./index-BBkUAzwr.js";import{u as n}from"./styled-components.browser.esm-CoKU8m7y.js";import{g as l,a as d,c as m}from"./polished.esm-DHPXM_EY.js";import{R as h}from"./RedbackUiThemeProvider-D71Zj-Rh.js";import{t as u}from"./index-CUhKrI82.js";import{A as g}from"./Alert-70_fx8x3.js";const x=n.div`
 	background: ${e=>e.theme.colors.background};
 	margin-bottom: ${e=>e.theme.spacing.xl};
 `,$=n.div`
