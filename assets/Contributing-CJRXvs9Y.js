@@ -1,4 +1,4 @@
-import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as o}from"./index-z5U8iC57.js";import"./index-BBkUAzwr.js";function r(s){const n={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",hr:"hr",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...o(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"contributing-to-redback-ui",children:"Contributing to Redback UI"}),`
+import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as i}from"./index-z5U8iC57.js";import"./index-BBkUAzwr.js";function r(s){const n={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",hr:"hr",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...i(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"contributing-to-redback-ui",children:"Contributing to Redback UI"}),`
 `,e.jsxs(n.ol,{children:[`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#prerequisites",children:"Prerequisites"})}),`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#getting-started",children:"Getting started"})}),`
@@ -27,27 +27,41 @@ import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as o}from"
 `]}),`
 `,e.jsx(n.h2,{id:"getting-started",children:"Getting started"}),`
 `,e.jsxs(n.ol,{children:[`
-`,e.jsxs(n.li,{children:["Clone the repository to your local machine",`
-`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`git clone https://github.com/Redback-Operations/redback-ui.git
+`,e.jsxs(n.li,{children:[`
+`,e.jsx(n.p,{children:'If you do not have write access to the repository, first fork the repository to your own GitHub account by clicking on the "Fork" button in the top right corner of the repository page on GitHub.'}),`
+`,e.jsx(n.p,{children:"If you have write access, you can skip this step and create a branch within the main repository directly."}),`
+`]}),`
+`,e.jsxs(n.li,{children:[`
+`,e.jsx(n.p,{children:"Clone the repository to your local machine"}),`
+`,e.jsx(n.p,{children:"For your fork:"}),`
+`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`git clone https://github.com/YOUR_USERNAME_HERE/redback-ui.git
+`})}),`
+`,e.jsx(n.p,{children:"For the main repository:"}),`
+`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`    git clone https://github.com/Redback-Operations/redback-ui.git
 `})}),`
 `]}),`
-`,e.jsxs(n.li,{children:["Create a branch for your work, following the Capstone ",e.jsx(n.a,{href:"https://verdant-raindrop-f3e404.netlify.app/processes/quality-assurance/git-contributions-guide/#branching-guidelines",rel:"nofollow",children:"Branching Guidelines"}),`
+`,e.jsxs(n.li,{children:[`
+`,e.jsxs(n.p,{children:["Create a branch for your work, following the Capstone ",e.jsx(n.a,{href:"https://verdant-raindrop-f3e404.netlify.app/processes/quality-assurance/git-contributions-guide/#branching-guidelines",rel:"nofollow",children:"Branching Guidelines"})]}),`
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`git branch <branch-name>
 `})}),`
 `]}),`
-`,e.jsxs(n.li,{children:["Check out your branch",`
+`,e.jsxs(n.li,{children:[`
+`,e.jsx(n.p,{children:"Check out your branch"}),`
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`git checkout <branch-name>
 `})}),`
 `]}),`
-`,e.jsxs(n.li,{children:["Open your terminal and navigate to the project directory",`
+`,e.jsxs(n.li,{children:[`
+`,e.jsx(n.p,{children:"Open your terminal and navigate to the project directory"}),`
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`cd path/to/redback-ui
 `})}),`
 `]}),`
-`,e.jsxs(n.li,{children:["Install the project dependencies",`
+`,e.jsxs(n.li,{children:[`
+`,e.jsx(n.p,{children:"Install the project dependencies"}),`
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`npm install
 `})}),`
 `]}),`
-`,e.jsxs(n.li,{children:["Start Storybook and see the components and docs, including your changes, in your browser",`
+`,e.jsxs(n.li,{children:[`
+`,e.jsx(n.p,{children:"Start Storybook and see the components and docs, including your changes, in your browser"}),`
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`npm run storybook
 `})}),`
 `]}),`
@@ -128,4 +142,4 @@ import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as o}from"
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1#principle2",rel:"nofollow",children:"2.x: Operable"})}),`
 `]}),`
 `]}),`
-`]})]})}function c(s={}){const{wrapper:n}={...o(),...s.components};return n?e.jsx(n,{...s,children:e.jsx(r,{...s})}):r(s)}export{c as default};
+`]})]})}function c(s={}){const{wrapper:n}={...i(),...s.components};return n?e.jsx(n,{...s,children:e.jsx(r,{...s})}):r(s)}export{c as default};
