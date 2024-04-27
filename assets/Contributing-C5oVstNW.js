@@ -1,4 +1,4 @@
-import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as i}from"./index-z5U8iC57.js";import"./index-BBkUAzwr.js";function r(s){const n={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",hr:"hr",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...i(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"contributing-to-redback-ui",children:"Contributing to Redback UI"}),`
+import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as o}from"./index-z5U8iC57.js";import"./index-BBkUAzwr.js";function r(s){const n={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",hr:"hr",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...o(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"contributing-to-redback-ui",children:"Contributing to Redback UI"}),`
 `,e.jsxs(n.ol,{children:[`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#prerequisites",children:"Prerequisites"})}),`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#getting-started",children:"Getting started"})}),`
@@ -6,6 +6,7 @@ import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as i}from"
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#working-with-documentation-pages",children:"Working with documentation pages"})}),`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#before-submitting-your-change",children:"Before submitting your change"})}),`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#submitting-your-change",children:"Submitting your change"})}),`
+`,e.jsx(n.li,{children:e.jsx(n.a,{href:"#video-tutorials",children:"Video tutorials"})}),`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#useful-links",children:"Useful links"})}),`
 `]}),`
 `,e.jsx(n.hr,{}),`
@@ -130,6 +131,13 @@ import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as i}from"
 `,e.jsx(n.p,{children:"Create a pull request on GitHub, ensuring your include a clear description of your changes and any relevant context for reviewers."}),`
 `]}),`
 `]}),`
+`,e.jsx(n.h2,{id:"video-tutorials",children:"Video tutorials"}),`
+`,e.jsxs(n.ol,{children:[`
+`,e.jsxs(n.li,{children:[e.jsx(n.a,{href:"https://www.loom.com/share/d77050ce968e4c3690f1760988318de3?sid=d2426caa-3dbf-4477-97a3-0e6beb4391d9",rel:"nofollow",children:"Local setup"})," (5 minutes)"]}),`
+`,e.jsxs(n.li,{children:[e.jsx(n.a,{href:"https://www.loom.com/share/527a2b3bec2d430b805dd35e273e9f27?sid=31f6d006-271c-40ff-8412-a792aa61e03e",rel:"nofollow",children:"Storybook 101"})," (9 minutes)"]}),`
+`,e.jsx(n.li,{children:"Creating a new component (coming soon)"}),`
+`,e.jsx(n.li,{children:"Styled Components 101 (coming soon)"}),`
+`]}),`
 `,e.jsx(n.h2,{id:"useful-links",children:"Useful links"}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"https://react.dev/",rel:"nofollow",children:"React docs"})}),`
@@ -142,4 +150,4 @@ import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as i}from"
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1#principle2",rel:"nofollow",children:"2.x: Operable"})}),`
 `]}),`
 `]}),`
-`]})]})}function c(s={}){const{wrapper:n}={...i(),...s.components};return n?e.jsx(n,{...s,children:e.jsx(r,{...s})}):r(s)}export{c as default};
+`]})]})}function c(s={}){const{wrapper:n}={...o(),...s.components};return n?e.jsx(n,{...s,children:e.jsx(r,{...s})}):r(s)}export{c as default};
