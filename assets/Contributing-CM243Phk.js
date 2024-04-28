@@ -135,8 +135,8 @@ import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as o}from"
 `,e.jsxs(n.ol,{children:[`
 `,e.jsxs(n.li,{children:[e.jsx(n.a,{href:"https://www.loom.com/share/d77050ce968e4c3690f1760988318de3?sid=d2426caa-3dbf-4477-97a3-0e6beb4391d9",rel:"nofollow",children:"Local setup"})," (5 minutes)"]}),`
 `,e.jsxs(n.li,{children:[e.jsx(n.a,{href:"https://www.loom.com/share/527a2b3bec2d430b805dd35e273e9f27?sid=31f6d006-271c-40ff-8412-a792aa61e03e",rel:"nofollow",children:"Storybook 101"})," (9 minutes)"]}),`
-`,e.jsx(n.li,{children:"Creating a new component (coming soon)"}),`
-`,e.jsx(n.li,{children:"Styled Components 101 (coming soon)"}),`
+`,e.jsxs(n.li,{children:[e.jsx(n.a,{href:"https://www.loom.com/share/79151a01446d4a798267b72dc01b6fa2",rel:"nofollow",children:"Creating a new component + Styled Components 101"})," (15 minutes)"]}),`
+`,e.jsx(n.li,{children:"Accessibility 101 + Styled Components 102 (coming soon)"}),`
 `]}),`
 `,e.jsx(n.h2,{id:"useful-links",children:"Useful links"}),`
 `,e.jsxs(n.ul,{children:[`
