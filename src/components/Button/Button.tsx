@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { StyledButton } from './Button.style.ts';
-import { ThemeColor, ThemeElementAppearance, ThemeElementSize } from '../../types.ts';
+import { StyledButton } from './Button.style';
+import { ThemeColor, ThemeElementAppearance, ThemeElementSize } from '../../types';
 
 type ButtonProps = {
 	label: string;

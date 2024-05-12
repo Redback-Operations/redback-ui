@@ -151,6 +151,7 @@
 					}
 				]
 			},
+			{"name": "dist"},
 			{
 				"name": "test-mocks",
 				"children": []
@@ -208,7 +209,11 @@
 				"extension": ["json"]
 			},
 			{
-				"name": "tsconfig.node",
+				"name": "tsconfig.dev",
+				"extension": ["json"]
+			},
+			{
+				"name": "tsconfig.dist",
 				"extension": ["json"]
 			},
 			{

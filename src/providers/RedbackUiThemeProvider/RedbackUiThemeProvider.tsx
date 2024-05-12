@@ -1,8 +1,8 @@
 import { FC, PropsWithChildren, ReactNode } from 'react';
-import { RedbackUiWrapper } from './RedbackUiThemeProvider.style.ts';
-import { RedbackUiTheme } from '../../types.ts';
+import { RedbackUiWrapper } from './RedbackUiThemeProvider.style';
+import { RedbackUiTheme } from '../../types';
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyle } from './GlobalStyle.tsx';
+import { GlobalStyle } from './GlobalStyle';
 
 type RedbackUiThemeProviderProps = {
 	theme: RedbackUiTheme;

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { StyledLinkButton } from './LinkButton.style';
-import { ThemeColor, ThemeElementAppearance, ThemeElementSize } from '../../types.ts';
+import { ThemeColor, ThemeElementAppearance, ThemeElementSize } from '../../types';
 
 type LinkButtonProps = {
 	label: string;
