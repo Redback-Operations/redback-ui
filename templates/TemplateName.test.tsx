@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import TemplateName from './TemplateName';
+import { TemplateName } from './TemplateName';
 
 describe('<TemplateName />', () => {
 	it('should mount', () => {

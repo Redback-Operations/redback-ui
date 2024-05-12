@@ -9,7 +9,7 @@ type RedbackUiThemeProviderProps = {
 	children: ReactNode;
 }
 
-const RedbackUiThemeProvider: FC<PropsWithChildren<RedbackUiThemeProviderProps>> = ({
+export const RedbackUiThemeProvider: FC<PropsWithChildren<RedbackUiThemeProviderProps>> = ({
 	theme,
 	children
 }) => {
@@ -22,5 +22,3 @@ const RedbackUiThemeProvider: FC<PropsWithChildren<RedbackUiThemeProviderProps>>
 		</ThemeProvider>
 	);
 };
-
-export default RedbackUiThemeProvider;

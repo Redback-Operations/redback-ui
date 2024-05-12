@@ -10,7 +10,7 @@ type ButtonProps = {
 	size?: ThemeElementSize;
 }
 
-const Button: FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
 	label,
 	color = 'primary',
 	onClick,
@@ -23,5 +23,3 @@ const Button: FC<ButtonProps> = ({
 		</StyledButton>
 	);
 };
-
-export default Button;

@@ -1,4 +1,4 @@
-import LinkButton from './LinkButton';
+import { LinkButton } from './LinkButton';
 import type { Meta, StoryObj } from '@storybook/react';
 import { themeColorSubset } from '../../types';
 

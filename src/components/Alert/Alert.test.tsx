@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Alert from './Alert';
+import { Alert } from './Alert';
 
 describe('<Alert />', () => {
 	it('should mount', () => {

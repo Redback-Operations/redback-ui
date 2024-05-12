@@ -11,7 +11,7 @@ type LinkButtonProps = {
 	target?: '_blank';
 }
 
-const LinkButton: FC<LinkButtonProps> = ({
+export const LinkButton: FC<LinkButtonProps> = ({
 	label,
 	color = 'primary',
 	href = '#',
@@ -25,5 +25,3 @@ const LinkButton: FC<LinkButtonProps> = ({
 		</StyledLinkButton>
 	);
 };
-
-export default LinkButton;
