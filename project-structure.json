@@ -187,6 +187,10 @@
 				"extension": ["js", "ts"]
 			},
 			{
+				"name": "jest.utils",
+				"extension": ["ts", "tsx"]
+			},
+			{
 				"name": "LICENSE"
 			},
 			{
