@@ -1,9 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import { TemplateName } from './TemplateName';
+import { screen } from '@testing-library/react';
+import { renderWithDeps } from '../../../jest.utils.tsx';
+import TemplateName from './TemplateName';
 
 describe('<TemplateName />', () => {
-	it('should mount', () => {
-		render(<TemplateName/>);
+	it('renders', () => {
+		renderWithDeps(<TemplateName />);
 
 		const templateName = screen.getByTestId('TemplateName');
 
