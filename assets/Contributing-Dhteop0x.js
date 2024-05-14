@@ -1,4 +1,4 @@
-import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as o}from"./index-z5U8iC57.js";import"./index-BBkUAzwr.js";function r(s){const n={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",hr:"hr",li:"li",ol:"ol",p:"p",pre:"pre",ul:"ul",...o(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"contributing-to-redback-ui",children:"Contributing to Redback UI"}),`
+import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as o}from"./index-z5U8iC57.js";import"./index-BBkUAzwr.js";function r(s){const n={a:"a",code:"code",em:"em",h1:"h1",h2:"h2",h3:"h3",hr:"hr",li:"li",ol:"ol",p:"p",pre:"pre",strong:"strong",ul:"ul",...o(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(n.h1,{id:"contributing-to-redback-ui",children:"Contributing to Redback UI"}),`
 `,e.jsxs(n.ol,{children:[`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#prerequisites",children:"Prerequisites"})}),`
 `,e.jsx(n.li,{children:e.jsx(n.a,{href:"#getting-started",children:"Getting started"})}),`
@@ -78,6 +78,7 @@ import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as o}from"
 `,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"ComponentName.stories.tsx"}),": the ",e.jsx(n.a,{href:"https://storybook.js.org/",rel:"nofollow",children:"Storybook"})," file used to see, test, and document the component"]}),`
 `,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"ComponentName.test.tsx"}),": the unit test file. A basic example is included. Please add further tests as relevant to your component."]}),`
 `]}),`
+`,e.jsxs(n.p,{children:[e.jsx(n.strong,{children:"Important!"})," To enable your component to be used by other apps or websites using the short ",e.jsx(n.code,{children:"import { YourComponent } from '@redbackops/redback-ui'"})," syntax, you will need to export it from ",e.jsx(n.code,{children:"src/index.ts"}),". Please add it to the list following the same format as the other components, and in alphabetical order."]}),`
 `,e.jsx(n.h3,{id:"theme-and-design-tokens",children:"Theme and design tokens"}),`
 `,e.jsx(n.p,{children:"Design tokens are used to maintain consistency across the design system and applications that use it. The tokens are defined in a JavaScript object."}),`
 `,e.jsxs(n.p,{children:["All apps/websites consuming Redback UI should define a theme with keys matching the example provided in Redback UI (i.e., of type ",e.jsx(n.code,{children:"RedbackUiTheme"}),"), and be wrapped in a ",e.jsx(n.code,{children:"RedbackUiThemeProvider"})," component imported from Redback UI. This component is a wrapper for styled-components' ",e.jsx(n.code,{children:"ThemeProvider"})," that expects the tokens we have defined."]}),`
@@ -95,8 +96,10 @@ import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as o}from"
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`npx generate-react-cli component ComponentName --type=doc
 `})}),`
 `,e.jsx(n.h2,{id:"before-submitting-your-change",children:"Before submitting your change"}),`
-`,e.jsx(n.p,{children:"Test the built version of Storybook to make sure everything works as expected, so that when your PR is approved and merged into the main branch you can be confident that you haven't introduced any errors such as incorrect file paths."}),`
 `,e.jsxs(n.ol,{children:[`
+`,e.jsxs(n.li,{children:[`
+`,e.jsx(n.p,{children:"Test the built version of Storybook to make sure everything works as expected, so that when your PR is approved and merged into the main branch you can be confident that you haven't introduced any errors such as incorrect file paths."}),`
+`,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:["Build Storybook",`
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`npm run build
 `})}),`
@@ -104,6 +107,30 @@ import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as o}from"
 `,e.jsxs(n.li,{children:["Preview the built version locally",`
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`npm run preview
 `})}),`
+`]}),`
+`]}),`
+`]}),`
+`,e.jsxs(n.li,{children:[`
+`,e.jsx(n.p,{children:"Run ESLint to check for any formatting or quality issues in your code according to the project's ESLint configuration."}),`
+`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`npm run lint
+`})}),`
+`,e.jsx(n.p,{children:"Some issues can be fixed automatically:"}),`
+`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`npm run lint:fix
+`})}),`
+`,e.jsx(n.p,{children:"It is recommended to enable running ESLint on save in your IDE to catch issues and reformat code as you work."}),`
+`,e.jsx(n.p,{children:"If you would like to add or edit a rule in the ESLint configuration, please raise a pull request with your change and include the reasoning in the description."}),`
+`]}),`
+`,e.jsxs(n.li,{children:[`
+`,e.jsx(n.p,{children:"Ensure your files follow the expected structure"}),`
+`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-bash",children:`npm run lint:structure
+`})}),`
+`,e.jsx(n.p,{children:e.jsxs(n.em,{children:[e.jsx(n.strong,{children:"Note"}),": This will also run the general ESLint checks from step 2, so it's a good idea to run that first so you can fix any issues before running the structure check."]})}),`
+`]}),`
+`,e.jsxs(n.li,{children:[`
+`,e.jsxs(n.p,{children:["If you created a new component, ensure it is exported by opening ",e.jsx(n.code,{children:"src/index.ts"})," and add your component to the list following the same format as the other components, and in alphabetical order."]}),`
+`]}),`
+`,e.jsxs(n.li,{children:[`
+`,e.jsxs(n.p,{children:["Bump the version number in ",e.jsx(n.code,{children:"package.json"})," according to the ",e.jsx(n.a,{href:"https://semver.org/",rel:"nofollow",children:"Semantic Versioning"})," guidelines."]}),`
 `]}),`
 `]}),`
 `,e.jsx(n.h2,{id:"submitting-your-change",children:"Submitting your change"}),`
@@ -128,7 +155,7 @@ import{j as e}from"./jsx-runtime-DRTy3Uxn.js";import{useMDXComponents as o}from"
 `})}),`
 `]}),`
 `,e.jsxs(n.li,{children:[`
-`,e.jsx(n.p,{children:"Create a pull request on GitHub, ensuring your include a clear description of your changes and any relevant context for reviewers."}),`
+`,e.jsxs(n.p,{children:["Create a pull request on GitHub, in ",e.jsx(n.a,{href:"https://github.com/Redback-Operations/redback-ui",rel:"nofollow",children:"the main Redback UI repository"}),", ensuring your include a clear description of your changes and any relevant context for reviewers."]}),`
 `]}),`
 `]}),`
 `,e.jsx(n.h2,{id:"video-tutorials",children:"Video tutorials"}),`
