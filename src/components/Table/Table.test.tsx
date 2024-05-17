@@ -1,9 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import Table from './Table';
+import { screen } from '@testing-library/react';
+import { renderWithDeps } from '../../../jest.utils';
+import { Table } from './Table';
 
 describe('<Table />', () => {
-	it('should mount', () => {
-		render(<Table/>);
+	it('renders', () => {
+		renderWithDeps(<Table/>);
 
 		const table = screen.getByTestId('Table');
 
