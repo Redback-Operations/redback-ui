@@ -6,7 +6,7 @@ import { Forward } from 'lucide-react';
 type Message = {
 	text: string;
 	sender: 'me' | 'other';
-	timestamp: string; // Update to only include time
+	timestamp: string;
 };
 
 type SupportChatboxProps = NonNullable<unknown>;
@@ -15,7 +15,7 @@ export const SupportChatbox: React.FC<SupportChatboxProps> = () => {
 	// State to hold the current message input by the user
 	const [currentMessage, setCurrentMessage] = useState('');
 
-	// State to hold the list of messages, starting with a default message from the other side
+	// State to hold the list of messages, starting with a default message from Redback support
 	const [messageList, setMessageList] = useState<Message[]>([
 		{ text: 'Hi, how can I assist you today?', sender: 'other', timestamp: new Date().toLocaleTimeString() }
 	]);
