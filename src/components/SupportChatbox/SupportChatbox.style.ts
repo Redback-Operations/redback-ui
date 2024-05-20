@@ -23,10 +23,11 @@ export const StyledSupportChatbox = styled.div`
     .chatbox-header img {
         width: 40px;
         height: 40px;
-		margin: 0.8rem;
-		padding: 0.2rem;
+		margin: 0.6rem;
+		padding: 0.4rem;
 		border-radius: 50%;
-		background-color: hsl(0,70%,90%);
+		background-color: ${props => props.theme.colors['subtle']};
+        border: 1px solid ${props => props.theme.colors['info']};
     }
 
     .chatbox-header h3 {
