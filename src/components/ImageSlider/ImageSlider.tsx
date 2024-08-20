@@ -7,10 +7,11 @@ import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from 'lucide-react';
 
 type ImageSliderProps = {
 	images: string[]; // Array of image URLs
+	altTexts: string[]; // Array of alt texts for each image
 	size: 'small' | 'large'; // Define the size prop
 }
 
-const ImageSlider: FC<ImageSliderProps> = ({ images, size }:ImageSliderProps ) => {
+const ImageSlider: FC<ImageSliderProps> = ({ images, altTexts, size }:ImageSliderProps ) => {
 	// State to track current image index
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 	// Function to navigate to previous slide
@@ -34,7 +35,7 @@ const ImageSlider: FC<ImageSliderProps> = ({ images, size }:ImageSliderProps ) =
 				}}>
 					{/* Render images */}
 					{images.map((url, index) => (
-						<img key={index} src={url} alt={`Slide ${index}`} className="slider-image" style={{ width: `${100 / images.length}%` }} />
+						<img key={index} src={url} alt={altTexts[index] || `Slide ${index}`} className="slider-image" style={{ width: `${100 / images.length}%` }} />
 					))}
 				</div>
 				{/* Navigation buttons */}
