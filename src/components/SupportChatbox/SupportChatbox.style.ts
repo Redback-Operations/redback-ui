@@ -67,7 +67,7 @@ export const StyledSupportChatbox = styled.div`
     .other-message {
         align-self: flex-end;
         background-color: #e3e3e3;
-	color: ${props => props.theme.colors['dark']};;        
+		color: ${props => props.theme.colors['dark']};;        
     }
 
     .message-meta {
