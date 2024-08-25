@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { StyledBackdrop, StyledModal } from './Modal.style';
+import { StyledModal } from './Modal.style';
 
 export const Modal: React.FC = () => {
 	const [open, setOpen] = useState(false);
 
 	const handleOpen = () => setOpen(true);
-	const handleClose = () => setOpen(false);
+	// const handleClose = () => setOpen(false);
 
 	return (
 		<div>
