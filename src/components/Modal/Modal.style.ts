@@ -27,9 +27,9 @@ export const StyledModal = styled.div`
 		margin-bottom: 0;
 		font-size: ${(props) => props.theme.fontSizes.md || '1rem'};
 		color: ${(props) => {
-			const textColor = props.theme.colors.text || '#000000';
-			const isDark = getLuminance(props.theme.colors.background || '#ffffff') < 0.5;
-			return isDark ? tint(0.1, textColor) : shade(0.2, textColor);
-		}};
+		const textColor = props.theme.colors.text || '#000000';
+		const isDark = getLuminance(props.theme.colors.background || '#ffffff') < 0.5;
+		return isDark ? tint(0.1, textColor) : shade(0.2, textColor);
+	}};
 	}
 `;
