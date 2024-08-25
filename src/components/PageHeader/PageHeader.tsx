@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { NavLink } from "react-router-dom";
-import { StyledPageHeader } from "./PageHeader.style";
+import { FC } from 'react';
+import { NavLink } from 'react-router-dom';
+import { StyledPageHeader } from './PageHeader.style';
 
 type MenuItem = {
 	label: string;
@@ -10,13 +10,13 @@ type MenuItem = {
 type PageHeaderProps = {
 	logo: string; // URL or path to the logo image
 	menuItems: MenuItem[]; // Array of menu items
-	size?: "small" | "large"; // Optional size prop, if needed
+	size?: 'small' | 'large'; // Optional size prop, if needed
 };
 
 export const PageHeader: FC<PageHeaderProps> = ({
-	logo = "Path/to/logo.png",
+	logo = 'Path/to/logo.png',
 	menuItems = [],
-	size = "large",
+	size = 'large',
 }: PageHeaderProps) => {
 	return (
 		<StyledPageHeader data-testid="PageHeader" size={size}>
