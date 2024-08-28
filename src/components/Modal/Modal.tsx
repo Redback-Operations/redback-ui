@@ -8,7 +8,7 @@ export const Modal: React.FC = () => {
 	// const handleClose = () => setOpen(false);
 
 	return (
-		<div>
+		<div data-testid="Modal">
 			<button onClick={handleOpen}>Open modal</button>
 			{open && (
 				<>
