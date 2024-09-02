@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyledModal, StyledBackdrop } from './Modal.style';
+import { StyledModal } from './Modal.style';
 
 export const Modal: React.FC = () => {
 	const [open, setOpen] = useState(false);
