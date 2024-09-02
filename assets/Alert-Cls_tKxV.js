@@ -22,4 +22,4 @@ import{j as c}from"./jsx-runtime-Bxcv0yjW.js";import{u as l}from"./styled-compon
 			margin-bottom: 0;
 		}
 	}
-`,n=({type:e,children:r})=>c.jsx(u,{"data-testid":"Alert",type:e??"info",children:r});try{n.displayName="Alert",n.__docgenInfo={description:"",displayName:"Alert",props:{type:{defaultValue:null,description:"",name:"type",required:!1,type:{name:"enum",value:[{value:'"success"'},{value:'"info"'},{value:'"warning"'},{value:'"error"'}]}}}}}catch{}export{n as A};
+`,n=({type:e,children:r})=>c.jsx(u,{"data-testid":"Alert",type:e??"info",children:r});try{n.displayName="Alert",n.__docgenInfo={description:"",displayName:"Alert",props:{type:{defaultValue:null,description:"",name:"type",required:!1,type:{name:"enum",value:[{value:'"info"'},{value:'"warning"'},{value:'"success"'},{value:'"error"'}]}}}}}catch{}export{n as A};
