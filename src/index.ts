@@ -7,3 +7,4 @@ export * from './components/LinkButton/LinkButton';
 export * from './components/Table/Table';
 export * from './components/TruncatedText/TruncatedText';
 export * from './components/PageHeader/PageHeader';
+export * from './components/Modal/Modal';
