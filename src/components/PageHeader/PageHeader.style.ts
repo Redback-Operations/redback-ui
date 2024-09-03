@@ -1,17 +1,25 @@
 import styled from 'styled-components';
+import { ThemeElementSize, ThemeColor } from '../../types';
+import { readableColor, shade } from 'polished';
 
-export const StyledPageHeader = styled.header<{ size: 'small' | 'large' }>`
+type StyledPageHeaderProps = {
+	$size: ThemeElementSize;
+    $color: ThemeColor;
+};
+
+export const StyledPageHeader = styled.header<StyledPageHeaderProps>`
     .header-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        max-width: ${props => (props.size === 'small' ? '600px' : '1200px')};
-        height: ${props => (props.size === 'small' ? '60px' : '100px')};
-        padding: ${props => (props.size === 'small' ? '0.5rem' : '1rem')};
+        max-width: ${props => (props.$size === 'sm' ? '600px' : '1200px')};
+        height: ${props => props.$size === 'sm' ? props.theme.spacing.xl : props.theme.spacing.xxl};
+        padding: ${props => props.$size === 'sm' ? props.theme.spacing.sm : props.theme.spacing.md};
         margin: 0 auto;
-        background-color: #333; /* Background color for the header */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for header */
+        background-color: ${props => props.theme.colors[props.$color]};
+        color: ${props => readableColor(props.theme.colors[props.$color])};
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .logo-container {
@@ -20,32 +28,29 @@ export const StyledPageHeader = styled.header<{ size: 'small' | 'large' }>`
 
     .logo {
         height: 100%;
-        max-height: ${props => (props.size === 'small' ? '50px' : '80px')}; /* Adjust logo size */
+        max-height: ${props => props.$size === 'sm' ? props.theme.spacing.sm : props.theme.spacing.lg};
         width: auto;
     }
 
     .menu-container {
         display: flex;
-        gap: ${props => (props.size === 'small' ? '0.5rem' : '1rem')}; /* Space between menu items */
+        gap: ${props => props.$size === 'sm' ? props.theme.spacing.sm : props.theme.spacing.md};
     }
 
     .menu-item {
         all: unset;
-        color: white; /* Text color for menu items */
-        font-size: ${props => (props.size === 'small' ? '0.8rem' : '1rem')}; /* Font size based on size prop */
-        padding: ${props => (props.size === 'small' ? '0.25rem 0.5rem' : '0.5rem 1rem')}; /* Padding around menu items */
+        font-size: ${props => props.$size === 'sm' ? props.theme.fontSizes.sm : props.theme.fontSizes.md};
+        padding: ${props => props.$size === 'sm' ? props.theme.spacing.xs : props.theme.spacing.sm};
         cursor: pointer;
-        transition: color 150ms ease-in-out, background-color 150ms ease-in-out; /* Transition for hover effects */
-        text-decoration: none; /* Remove underline from links */
+        transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+        text-decoration: none;
     }
 
     .menu-item:hover {
-        color: #ddd; /* Hover text color */
-        background-color: rgba(255, 255, 255, 0.1); /* Hover background color */
+        background-color: ${props => shade(0.15, props.theme.colors.primary)};
     }
 
     .menu-item.active {
-        color: #ffd700; /* Active link color */
-        font-weight: bold; /* Bold active link */
+        font-weight: ${props => props.theme.fontWeights.bold};
     }
 `;
