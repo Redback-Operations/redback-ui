@@ -21,3 +21,4 @@ export const renderWithDeps = (component: ReactNode, deps: Injectable[] = []) =>
 		</DiProvider>
 	);
 };
+
