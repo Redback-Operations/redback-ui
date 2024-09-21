@@ -7,4 +7,4 @@ import{j as r}from"./jsx-runtime-CKrituN3.js";import{u as n}from"./styled-compon
 	line-height: 1;
 	text-transform: uppercase;
 	font-weight: ${e=>e.theme.fontWeights.semibold};
-`,t=({type:e,text:a})=>r.jsx(s,{"data-testid":"Label",type:e,children:a});try{t.displayName="Label",t.__docgenInfo={description:"",displayName:"Label",props:{type:{defaultValue:null,description:"",name:"type",required:!0,type:{name:"enum",value:[{value:'"success"'},{value:'"info"'},{value:'"warning"'},{value:'"error"'}]}},text:{defaultValue:null,description:"",name:"text",required:!0,type:{name:"string"}}}}}catch{}export{t as L};
+`,t=({type:e,text:a})=>r.jsx(s,{"data-testid":"Label",type:e,children:a});try{t.displayName="Label",t.__docgenInfo={description:"",displayName:"Label",props:{type:{defaultValue:null,description:"",name:"type",required:!0,type:{name:"enum",value:[{value:'"info"'},{value:'"warning"'},{value:'"success"'},{value:'"error"'}]}},text:{defaultValue:null,description:"",name:"text",required:!0,type:{name:"string"}}}}}catch{}export{t as L};
