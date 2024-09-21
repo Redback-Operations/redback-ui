@@ -225,7 +225,7 @@
 				"extension": ["json"]
 			},
 			{
-				"name": "tsconfig.dist",
+				"name": "tsconfig.prod",
 				"extension": ["json"]
 			},
 			{
