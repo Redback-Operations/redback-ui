@@ -1,20 +1,28 @@
-import { render, fireEvent } from '@testing-library/react';
-import { Accordion } from './Accordion';
+import { screen, fireEvent } from '@testing-library/react';
+import { renderWithDeps } from '../../../jest.utils';
+import { Accordion } from './Accordion'; 
 
 describe('<Accordion />', () => {
-  it('renders the accordion component', () => {
-    const { getByText } = render(
-      <Accordion items={[{ title: 'Title', content: 'Content' }]} />
-    );
-    expect(getByText('Title')).toBeInTheDocument();
-  });
+	it('renders', () => {
+		renderWithDeps(<Accordion items={[{ title: 'Title', content: 'Content' }]} />);
+		
+		const titleElement = screen.getByText('Title');
+		
+		expect(titleElement).toBeInTheDocument();
+	});
 
-  it('toggles content on click', () => {
-    const { getByText } = render(
-      <Accordion items={[{ title: 'Title', content: 'Content' }]} />
-    );
-    const titleElement = getByText('Title');
-    fireEvent.click(titleElement);
-    expect(getByText('Content')).toBeInTheDocument();
-  });
+	it('toggles content on click', () => {
+		renderWithDeps(<Accordion items={[{ title: 'Title', content: 'Content' }]} />);
+		
+		const titleElement = screen.getByText('Title');
+		fireEvent.click(titleElement);
+		
+		const contentElement = screen.getByText('Content');
+		expect(contentElement).toBeVisible();
+
+		fireEvent.click(titleElement);
+		expect(contentElement).not.toBeVisible();
+	});
 });
+
+
