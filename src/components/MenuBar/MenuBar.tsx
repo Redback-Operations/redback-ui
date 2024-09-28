@@ -1,47 +1,38 @@
-import { FC, useState } from 'react';
-import { StyledMenuBar, MenuItem, HamburgerIcon, DropdownMenu, DropdownItem, IconImage } from './MenuBar.style';
+import { FC } from 'react';
+import { StyledMenuBar, MenuItem, HamburgerIcon, IconImage } from './MenuBar.style';
+import { ThemeColor } from '../../types';
 
-type MenuBarProps = {
-	items: { label: string, link: string, submenu?: { label: string, link: string }[] }[];
+type MenuBarItem = {
+  label: string;
+  link: string;
+  onClick?: () => void;
 };
 
-export const MenuBar: FC<MenuBarProps> = ({ items }) => {
-	const [isOpen, setIsOpen] = useState(false);
+type MenuBarProps = {
+  items: MenuBarItem[];
+  color?: ThemeColor; // Added color prop like in the Button component
+};
 
-	const toggleMenu = () => setIsOpen(!isOpen);
-
+export const MenuBar: FC<MenuBarProps> = ({ items, color = 'primary' }) => {
 	return (
-		<StyledMenuBar>
-			{/* Only icon.svg from public folder */}
+		<StyledMenuBar $color={color}>
 			<IconImage src="/icon.svg" alt="Menu Icon" />
-			<HamburgerIcon onClick={toggleMenu}>
-				☰
-			</HamburgerIcon>
-			<nav className={isOpen ? 'open' : ''}>
-				{items.map((item, index) => (
-					<div key={index}>
-						{item.submenu ? (
-							<DropdownMenu>
-								<MenuItem href={item.link}>
-									{item.label} ▼
-								</MenuItem>
-								<div className="dropdown-content">
-									{item.submenu.map((subItem, subIndex) => (
-										<DropdownItem key={subIndex} href={subItem.link}>
-											{subItem.label}
-										</DropdownItem>
-									))}
-								</div>
-							</DropdownMenu>
-						) : (
-							<MenuItem href={item.link}>
+
+			<HamburgerIcon aria-label="Toggle menu">☰</HamburgerIcon>
+
+			<nav>
+				<ul>
+					{items.map((item, index) => (
+						<li key={index}>
+							<MenuItem href={item.link} onClick={item.onClick}>
 								{item.label}
 							</MenuItem>
-						)}
-					</div>
-				))}
+						</li>
+					))}
+				</ul>
 			</nav>
 		</StyledMenuBar>
 	);
 };
 
+export default MenuBar;

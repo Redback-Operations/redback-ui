@@ -1,29 +1,44 @@
 import { MenuBar } from './MenuBar';
+import { action } from '@storybook/addon-actions'; // Use 'action' instead of 'fn'
 import type { Meta, StoryObj } from '@storybook/react';
+import { themeColorSubset } from '../../types';
 
-const meta = {
+const meta: Meta<typeof MenuBar> = {
 	title: 'Components/MenuBar',
 	component: MenuBar,
-} satisfies Meta<typeof MenuBar>;
+	argTypes: {
+		color: { control: 'select', options: Object.keys(themeColorSubset) },
+	},
+	args: {
+		color: 'primary',
+		items: [
+			{ label: 'Home', link: '/', onClick: action('Home clicked') },
+			{ label: 'About', link: '/about', onClick: action('About clicked') },
+			{ label: 'Contact', link: '/contact', onClick: action('Contact clicked') },
+		],
+	},
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultProps = {
-	items: [
-		{ label: 'Home', link: '/' },
-		{ label: 'About', link: '/about' },
-		{ label: 'Services', link: '/services', submenu: [
-			{ label: 'Web Development', link: '/services/web' },
-			{ label: 'Mobile Development', link: '/services/mobile' }
-		]
-		},
-		{ label: 'Contact', link: '/contact' }
-	],
-};
-
 export const Default: Story = {
 	args: {
-		...defaultProps,
+		color: 'primary',
+	},
+};
+
+export const Secondary: Story = {
+	args: {
+		color: 'secondary',
+	},
+};
+
+export const WithCustomItems: Story = {
+	args: {
+		items: [
+			{ label: 'Services', link: '/services', onClick: action('Services clicked') },
+			{ label: 'Blog', link: '/blog', onClick: action('Blog clicked') },
+		],
 	},
 };
