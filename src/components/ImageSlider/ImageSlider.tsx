@@ -2,16 +2,13 @@ import { FC, useState } from 'react';
 import { StyledImageSlider } from './ImageSlider.style';
 import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from 'lucide-react';
 
-
-
-
 type ImageSliderProps = {
 	images: string[]; // Array of image URLs
 	altTexts: string[]; // Array of alt texts for each image
 	size: 'small' | 'large'; // Define the size prop
 }
 
-const ImageSlider: FC<ImageSliderProps> = ({ images, altTexts, size }:ImageSliderProps ) => {
+const ImageSlider: FC<ImageSliderProps> = ({ images, altTexts, size }: ImageSliderProps) => {
 	// State to track current image index
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 	// Function to navigate to previous slide
@@ -35,20 +32,37 @@ const ImageSlider: FC<ImageSliderProps> = ({ images, altTexts, size }:ImageSlide
 				}}>
 					{/* Render images */}
 					{images.map((url, index) => (
-						<img key={index} src={url} alt={altTexts[index] || `Slide ${index}`} className="slider-image" style={{ width: `${100 / images.length}%` }} />
+						<img key={index} src={url} alt={altTexts[index] || `Slide ${index + 1}`} className="slider-image" style={{ width: `${100 / images.length}%` }} />
 					))}
 				</div>
 				{/* Navigation buttons */}
-				<button onClick={goToPreviousSlide} className="slider-button" style={{ left: 0 }}>
+				<button
+					onClick={goToPreviousSlide}
+					className="slider-button"
+					style={{ left: 0 }}
+					aria-label="Previous Slide" // Added aria-label for screen readers
+				>
 					<ArrowBigLeft />
 				</button>
-				<button onClick={goToNextSlide} className="slider-button" style={{ right: 0 }}>
+				<button
+					onClick={goToNextSlide}
+					className="slider-button"
+					style={{ right: 0 }}
+					aria-label="Next Slide" // Added aria-label for screen readers
+				>
 					<ArrowBigRight />
 				</button>
 				{/* Index buttons */}
 				<div style={{ position: 'absolute', bottom: '1.5rem', left: '50%', translate: '-50%', display: 'flex', gap: '.25rem', }}>
 					{images.map((_, index) => (
-						<button key={index} className="slider-index-button" onClick={() => setCurrentImageIndex(index)} > {index === currentImageIndex ? <CircleDot/> : <Circle/> } </button>
+						<button
+							key={index}
+							className="slider-index-button"
+							onClick={() => setCurrentImageIndex(index)}
+							aria-label={`Go to Slide ${index + 1}`} // Added aria-label for screen readers
+						>
+							{index === currentImageIndex ? <CircleDot /> : <Circle />}
+						</button>
 					))}
 				</div>
 			</div>
