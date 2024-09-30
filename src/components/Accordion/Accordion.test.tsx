@@ -1,6 +1,7 @@
 import { screen, fireEvent } from '@testing-library/react';
 import { renderWithDeps } from '../../../jest.utils';
 import { Accordion } from './Accordion'; 
+import { axe } from 'jest-axe';
 
 describe('<Accordion />', () => {
 	it('renders', () => {
@@ -22,6 +23,13 @@ describe('<Accordion />', () => {
 
 		fireEvent.click(titleElement);
 		expect(contentElement).not.toBeVisible();
+	});
+
+	it('has no accessibility violations', async () => {
+		const { container } = renderWithDeps(<Accordion items={[{ title: 'Title', content: 'Content' }]} />);
+		const results = await axe(container);
+		
+		expect(results).toHaveNoViolations();
 	});
 });
 
