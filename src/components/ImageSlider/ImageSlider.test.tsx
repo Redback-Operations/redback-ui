@@ -10,8 +10,14 @@ describe('<ImageSlider />', () => {
 		'https://images.pexels.com/photos/161172/cycling-bike-trail-sport-161172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
 	];
 
+	const altTexts = [
+		'Cyclists racing with high intensity',
+		'A Cyclist riding fast on a track',
+		'A cyclist overlooking scenic view',
+	];
+
 	it('renders', () => {
-		renderWithDeps(<ImageSlider size="small" images={images} />);
+		renderWithDeps(<ImageSlider size="small" images={images}  altTexts={altTexts}/>);
 
 		const templateName = screen.getByTestId('ImageSlider');
 
@@ -19,7 +25,7 @@ describe('<ImageSlider />', () => {
 	});
 
 	it('has no accessibility violations', async () => {
-		const { container } = renderWithDeps(<ImageSlider size="small" images={images} />);
+		const { container } = renderWithDeps(<ImageSlider size="small" images={images}  altTexts={altTexts}/>);
 		const results = await axe(container);
 
 		// TODO: Fix the violation and replace this with

@@ -8,6 +8,12 @@ const images = [
 	'https://images.pexels.com/photos/161172/cycling-bike-trail-sport-161172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
 ];
 
+const altTexts = [
+	'Cyclists racing with high intensity',
+	'A Cyclist riding fast on a track',
+	'A cyclist overlooking scenic view',
+];
+
 const meta = {
 	title: 'Components/ImageSlider',
 	component: ImageSlider,
@@ -36,6 +42,7 @@ export const Demo: Story = {
 	args: {
 		...defaultProps,
 		images: images,
+		altTexts: altTexts,
 		size: 'large',
 	},
 	tags: ['excludeFromSidebar']
@@ -45,6 +52,7 @@ export const Default: Story = {
 	args: {
 		...defaultProps,
 		images: images,
+		altTexts: altTexts,
 		size: 'large',
 	},
 	...disableControls
@@ -54,6 +62,7 @@ export const Large: Story = {
 	args: {
 		...defaultProps,
 		images: images,
+		altTexts: altTexts,
 		size: 'large',
 	},
 	...disableControls
@@ -63,6 +72,7 @@ export const Small: Story = {
 	args: {
 		...defaultProps,
 		images: images,
+		altTexts: altTexts,
 		size: 'small',
 	},
 	...disableControls
